@@ -1,74 +1,74 @@
 <!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[202302588] 이가은 | Hobby</title>
-    <link rel="stylesheet" href="../assets/styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">LIKELION_gaeun</div>
-            <ul class="nav-links">
-                <li><a href="/index.html">About me</a></li>
-                <li><a href="hobby.html">Hobby</a></li>
-                <li><a href="goal.html">Goals</a></li>
-            </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>[202302581] 우다연 | hobby</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <span class="sr-only">개인 취미를 소개하는 페이지입니다.</span>
+        <h1 class="navbar__logo">
+          <img src="../assets/images/img_logo.png" alt="멋쟁이사자 공식 로고">
+        </h1>
+
+        <nav aria-label="메뉴">
+          <ul class="navbar__menu">
+            <li><a href="../../index.html"  aria-label="홈 페이지로 이동">Home</a></li>
+            <li><a href="../pages/hobby.html" aria-label="취미 페이지로 이동">Hobby</a></li>
+            <li><a href="../pages/goals.html" aria-label="목표 페이지로 이동">Goals</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
-    <main>
-        <section class="profile">
-            <div class="slider-container">
-                <div class="slides">
-                    <img src="../assets/images/hobby1.jpeg" alt="취미 관련 사진 1">
-                    <img src="../assets/images/hobby2.jpeg" alt="취미 관련 사진 2">
-                    <img src="../assets/images/hobby3.jpeg" alt="취미 관련 사진 3">
-                </div>
-                <button class="prev" onclick="prevSlide()">&#10094;</button>
-                <button class="next" onclick="nextSlide()">&#10095;</button>
-            </div>
-            <div class="text">
-                <p>🏋️‍♀️ 웨이트</p>
-                <p>🐶 강아지 산책</p>
-                <p>🏃‍♀️ 런닝</p>
-                <p>🧘‍♀️ 플라잉 요가</p>
-                <p>🎧 클래식 듣기</p>
-            </div>
+
+
+      <h2 class="sr-only">취미 3가지</h2>
+      <main class="hobby">
+
+        <section class="hobby__card">
+          <figure>
+            <figcaption class="hobby__card--front">기타 연주하기</figcaption>
+              <div class="hobby__card--back">
+                <img class="hobby__image" src="../assets/images/hobby_2.jpg" alt="기타를 연주하는 모습의 사진">
+              </div>
+          </figure>
         </section>
-    </main>
 
-    <footer>
-        &copy; 2025 이가은
-    </footer>
+        <section class="hobby__card">
+          <figure>
+            <figcaption class="hobby__card--front">편의점 신상 탐방</figcaption>
+              <div class="hobby__card--back">
+                <img class="hobby__image" src="../assets/images/hobby_1.jpg" alt="편의점 탐방으로 수집한 제품들 사진">
+              </div>
+          </figure>
+       </section>
 
-    <script>
-        let currentIndex = 0;
+        <section class="hobby__card" >
+          <figure>
+            <figcaption class="hobby__card--front">우드 퍼즐 만들기</figcaption>
+              <div class="hobby__card--back">
+                <img class="hobby__image" src="../assets/images/hobby_3jpg.jpg" alt=" 타지마할 우드퍼즐 사진">
+              </div>
+          </figure>
+        </section>
 
-        function showSlide(index) {
-            const slides = document.querySelector('.slides');
-            const totalSlides = document.querySelectorAll('.slides img').length;
+        <section class="hobby__card">
+          <figure>
+            <figcaption class="hobby__card--front">원숭이 짤 모으기</figcaption>
+              <div class="hobby__card--back">
+               <img class="hobby__image" src="../assets/images/hobby_4.jpg" alt="갤러리 원숭이 앨범 사진">
+              </div>
+          </figure>
+        </section>
 
-            if (index >= totalSlides) {
-                currentIndex = 0;
-            } else if (index < 0) {
-                currentIndex = totalSlides - 1;
-            } else {
-                currentIndex = index;
-            }
+      </main>
 
-            slides.style.transform = `translateX(-${currentIndex * 50}%)`;
-        }
 
-        function nextSlide() {
-            showSlide(currentIndex + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentIndex - 1);
-        }
-    </script>
-</body>
+    <p>마우스를 올리면 사진이 보여요</p>
+  </body>
+  
 </html>
